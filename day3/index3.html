@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="header1">My Animation!</h1>
+        <style>
+            .outer {
+                width: 500px;
+                height: 500px;
+                background-color: black;
+                position: relative;
+            }
+
+            .inner {
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                 border: solid black;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+        <div id = "outer" class="outer">
+            <div id = "inner" class="inner"></div>
+        </div>
+        <button id ="button1" onclick ="mover()">Start Animation</button>
+        <script>
+            document.getElementById("header1").addEventListener("copy", changeText);
+            
+            document.getElementById("header1").removeEventListener("copy", changeText);
+            function changeText() {
+                document.getElementById("header1").innerHTML = "Text Copied!";
+            }
+            function mover() {
+                var pos = 0;
+                var inner = document.getElementById("inner");
+                var interval = setInterval(move, 5);
+                function move() {
+                    if (pos == 450) {
+                        clearInterval(interval);
+                    }
+                    else {
+                        pos = pos + 1;
+                        inner.style.top = pos + "px";
+                        inner.style.left = pos + "px"; 
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

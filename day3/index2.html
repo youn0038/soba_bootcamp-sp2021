@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/3912001f1d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1 id="header" class="className">Turn on a lightbulb!</h1>
+        <i id="myIcon" class="far fa-lightbulb fa-10x"></i>
+        <button onclick="document.getElementById('myIcon').className = 'fas fa-lightbulb fa-10x'">
+            Turn on the lightbulb!
+        </button>
+        <!-- Another button show up here -->
+
+        <script>
+            //gets a singular item
+            document.getElementById("header").style.color = "red";
+            // document.getElementsByClassName("className")[0];
+            // document.getElementsByTagName("h1")[0].innerHTML = "Welcome!"
+
+            //Create an element
+            var button = document.createElement("button");
+            document.body.appendChild(button);
+            button.innerHTML = "Press Me!";
+
+            //remove elements
+            // doucment.replaceChild(button1, button2);
+
+
+        </script>
+        <!-- <button onclick="document.getElementById('header').innerHTML = 'Welcome to Day 3!'">Change Text</button> -->
+
+        <!-- Script Files -->
+        <script src="mine.js"></script>
+    </body>
+</html>

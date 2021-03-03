@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //variables
+            var x = 1;
+            var x = 1.1;
+            var x = "String here";
+            var x = true;
+            //string
+            var x = [1, 2, 3];
+            //object
+            var x = {
+                firstName: "Anna",
+                lastName: "Young",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            // document.write(x.fullName());
+
+            //introduced block scope
+            {
+                var x = 2;
+                let a = 1;
+                const b = 2;
+            }
+            //this would be valid
+            x = 1;
+
+            //STRING
+            var string = "A String";
+            var len = string.length;
+
+            var string1 = 4;
+            var string2 = "4";
+
+            // 4 4
+            var sum = string1 + " " + string2;
+            // document.write(sum);
+
+            var array = ["Anna", "Young", 1 , true];
+            // document.write(array[0]);
+            // document.write(array[1]);
+
+            //FUNCTIONS
+            function functionName(param1, param2) { 
+                var variable1 = 2;
+                return param1 + param2;
+            }
+
+            
+            //call function
+            functionName();
+
+            //Classes
+
+            class FullName {
+                constructor(fName, lName) {
+                    this.fName = fName;
+                    this.lName = lName;
+                }
+
+                //objects, methods
+                getName() {
+                    return this.fName;
+                }
+            }
+
+            //create an instance
+            var person1 = new FullName("Anna", "Young");
+
+            var name = person1.getName();
+            // document.write(name);
+
+            var array3 = [1, 2, 3];
+            for (var x = 0; x<3; x++) {
+                document.write(array3[x] + "<br>")
+            }
+
+        </script>
+    </body>
+</html>

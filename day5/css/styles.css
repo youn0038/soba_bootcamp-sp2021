@@ -1,0 +1,113 @@
+/* 
+    Font Information:
+
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+
+*/
+
+/* Variables */
+:root {
+    --light-blue: #edf6f9;
+    --olive-green: #475f44;
+    --white: #ffffff;
+}
+
+/* Typography */
+
+.header_1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.header_2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.header_4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 400; 
+}
+
+
+.p_1 {
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+.p_2 {
+    font-family: 'Lora', serif;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+/* Nav */
+
+
+/* Banner */
+.banner_bg {
+    height: 90vh;
+    background-image: url('../img/home_office.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* About */
+
+.about_img {
+    max-height: 400px;
+    object-fit: cover;
+
+}
+
+/* Skills */
+
+.section_skills {
+    background-color: var(--light-blue);
+}
+
+/* Projects */
+
+.drone_img {
+    object-fit: cover;
+    object-position: center;
+    height: 20rem;
+    transition: all 1s ease-in-out;
+}
+
+.img_container-p {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.drone_img:hover {
+    transform: scale(1.5);
+}
+
+/* Contact */
+
+.footer_section {
+    background-color: var(--light-blue);
+}
+
+.footer_left {
+    background-color: var(--light-blue);
+}
+
+.footer_right {
+    background-color: white;
+}
+
+.fas {
+    font-size: 1.5rem;
+}
+
+.fab {
+    font-size: 2rem;
+}

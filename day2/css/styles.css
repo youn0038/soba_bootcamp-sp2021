@@ -1,0 +1,79 @@
+/* HOME PAGE: */
+
+/* add to all styles */
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 65vh;
+    background-color: pink;
+    position: relative;
+
+}
+
+.header_box {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 40px 20px;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.header_name {
+    font-size: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header_para {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* FEATURES SECTION */
+
+.section_features {
+
+}
+.features_about {
+    width: 33.333%;
+    height: 35vh;
+    background-color: lightblue;
+    float: left;
+}
+
+.features_skills {
+    width: 33.333%;
+    height: 35vh;
+    background-color: purple;
+    float: left;
+}
+
+.features_projects {
+    width: 33.333%;
+    height: 35vh;
+    background-color: red;
+    float: left;
+    text-align: center;
+    transition: 3s;
+}
+
+.features_projects:hover {
+    background-color: pink;
+    border-radius: 50%;
+    transform: translateY(-5px);
+}
+
+.features_heading {
+    font-size: 35px;
+    float: left;
+}
