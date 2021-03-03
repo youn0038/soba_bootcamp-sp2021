@@ -19,3 +19,7 @@ Build a responsive portfolio with Bootstrap
 
 ### Day 6
 Intro to Python
+
+### Day 7 - 8
+Intro to Flask
+Simple Flask To-Do List App
