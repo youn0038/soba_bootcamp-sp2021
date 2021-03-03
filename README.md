@@ -2,13 +2,13 @@
 
 ## Class Files
 
-#### Day 1
+### Day 1
 Intro to HTML
 
-#### Day 2
+### Day 2
 Intro to CSS
 
-#### Day 3
+### Day 3
 Intro to JavaScript
 
 ### Day 4
