@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block style %}
+<!-- Axios -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{% endblock %}
+<!-- Body -->
+{% block body %}
+<h1 class="text-center pt-5 pb-3">
+    To-Do List
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center" id="todo_list">
+            <!-- Card -->
+            {% for x in range(1, (todo_items|length)) %}
+            <div class="card m-3" style="width: 18rem;" id="{{todo_items[x]['id']}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{todo_items[x]['title']}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{todo_items[x]['date']}}</h6>
+                  <p class="card-text">{{todo_items[x]['description']}}</p>
+                  <a id="l{{todo_items[x]['id']}}" class="card-link delete_link">Remove</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    // Add event listner
+    document.querySelectorAll(".delete_link").forEach(function(el){
+        el.addEventListener('click', function() {
+            var i;
+            //get the card's ide number
+            var id_name = (this.id).slice(1);
+            axios.delete('/todo-list/delete', {data: {id: id_name }}).then(resp => {
+                // receive data from the server
+                i = resp.data.toString();
+                //remove element from screen
+                document.getElementById(i).remove();
+            });
+        });
+    });
+</script>
+{% endblock %}

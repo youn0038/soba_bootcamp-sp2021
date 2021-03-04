@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block style %}
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{% endblock %}
+{% block body %}
+<h1 class="text-center py-5">GET request with Axios!</h1>
+<div class="d-flex justify-content-center align-items-center">
+    <button onclick="doSomething()" class="btn btn-outline-secondary">Press Me!</button>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        function doSomething() {
+            axios.get('https://dog.ceo/api/breeds/list/all').then(resp => {
+                console.log(resp.data.message);
+            })
+        }
+    </script>
+{% endblock %}
